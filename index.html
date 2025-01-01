@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Ano novo - sejogal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0%;
+            color: white;
+            font-weight: bold;
+        }
+
+        body {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 2%;
+            text-align: center;
+            background-color: black;
+        }
+        body {
+            height: 100vh;
+            animation: changeBackground 10s infinite alternate;
+        }
+        
+        @keyframes changeBackground {
+            0% {
+                background-color: #ff0000; /* Vermelho */
+            }
+            25% {
+                background-color: #00ff00; /* Verde */
+            }
+            50% {
+                background-color: #0000ff; /* Azul */
+            }
+            75% {
+                background-color: #ffff00; /* Amarelo */
+            }
+            100% {
+                background-color: #ff00ff; /* Rosa */
+            }
+        }
+
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 50px;
+            margin-bottom: 8%;
+        }
+
+        p,
+        q {
+            font-size: 25px;
+        }
+
+        .purple {
+            color: purple;
+        }
+
+        .blue {
+            color: black;
+        }
+
+        input {
+            border-radius: 3rem;
+            width: 50%;
+            height: 40px;
+            margin-bottom: 5%;
+            text-align: center;
+            color: black;
+        }
+
+        /* Estilizando o vídeo */
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            /* Coloca o vídeo atrás do conteúdo */
+        }
+
+        .icon {
+            width: 15%;
+        }
+        button{
+            /*color: black;*/
+            width: 10%;
+            border-radius: 4px;
+            height: 30px;
+            background-color: purple;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Estou passando para lhe desejar um Feliz ano novo!</h1>
+    <br>
+    <q id="text">Prosperidade para sua família</q><br><br>
+    <input id="input" type="text" placeholder="Digite seu nome">
+    <button onclick="pegarNome()" >Ir</button>
+    <br>
+    <label for="te">
+        Partilhar
+    </label><br>
+    <a href="https://wa.me/?text=Estou passando para lhe desejar Feliz Natal: https://sejogal.github.io/FelizAnoNovo/"
+        class="whatsapp-share-btn" target="_blank">
+        <img class="icon"
+            src="https://1.bp.blogspot.com/-pGsRrouvWAI/XkVHyz-xkyI/AAAAAAAAJcg/BLkwzlGjYjg2ekiWS1EXifycdnFoZbXggCLcBGAsYHQ/s1600/Whatsapp%2BIcon%2BLogo.png"
+            alt="">
+    </a><br>
+    <footer>
+        <q>By: Sejogal 2025</q>
+    </footer>
+    <script>
+        function trocaCor() {
+            const title = document.getElementById("title").classList.add("purple")
+        }
+        function trocaCor2() {
+            const title = document.getElementById("title").classList.add("blue")
+        }
+        function removeCor() {
+            document.getElementById("title").classList.remove("blue")
+        }
+        setInterval(trocaCor, 3000)
+        setInterval(trocaCor2, 7000)
+        setInterval(removeCor, 8000)
+        //Mensagens Motivadoras
+        setTimeout(function () {
+            document.getElementById("text").innerHTML = "Benção, saúde e sucesso para o ano 2025"
+        }, 5000)
+        setTimeout(function () {
+            document.getElementById("text").innerHTML = "Que Deus abençoe você!"
+        }, 10000)
+        setTimeout(function () {
+            document.getElementById("text").innerHTML = "Digite seu nome e compartilhe esta linda mensagem com os seus amigos! "
+        }, 13000)
+        //Pegar nome
+        function pegarNome() {
+            const nome = document.getElementById("input").value;
+            document.getElementById("text").innerHTML="Boa "+nome+", agora compartilhe com seus  amigos!";
+        }
+    </script>
+</body>
+
+</html>
